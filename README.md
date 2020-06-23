@@ -18,4 +18,7 @@ yarn add bestUtils --save
 
 ```js
 import bestUtils from 'bestUtils'
+
+// 获取URL参数 （search or hash）
+console.log(bestUtils.query) // 返回一个对象
 ```

@@ -22,9 +22,7 @@ then
   echo "publish..."
   git push origin refs/tags/v$VERSION
   git push
-  nrm use npm
   npm publish
-  nrm use taobao
   echo "finished"
  fi
  
