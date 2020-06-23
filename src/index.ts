@@ -1,5 +1,6 @@
 import { isChineseIDCardNumber } from './isChineseIDCardNumber'
 
+// 浏览器信息
 const ua = navigator.userAgent
 
 /**
