@@ -13,17 +13,18 @@ then
   VERSION=$VERSION npm run build
 
   # commit
-  echo "commit"
+  echo "commit..."
   git add -A
   git commit -m "[build] $VERSION"
   npm version $VERSION --message "[release] $VERSION"
 
   # publish
-  echo "publish"
+  echo "publish..."
   git push origin refs/tags/v$VERSION
   git push
   nrm use npm
   npm publish
   nrm use taobao
+  echo "finished"
  fi
  
