@@ -196,6 +196,19 @@ export const sleep = (msec: number) => {
   return new Promise<void>(resolve => setTimeout(resolve, msec))
 }
 
+/**
+ * 对象参数转为查询字符串参数
+ * @param obj 参数对象
+ */
+export const toQueryString = (obj: any): String => {
+  const res: any[] = []
+  Object.keys(obj).forEach(item => {
+    const val = obj[item] !== null ? obj[item] : ''
+    res.push(`${item}=${encodeURI(val)}`)
+  })
+  return res.join('&')
+}
+
 export default {
   capitalization,
   parseQuery,
